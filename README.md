@@ -44,7 +44,8 @@ Allocate Host Memory
 ```
 ### WITH MEMSET
 ```
-%%writefile mem.cu
+%%cuda
+#include<stdio.h>
 #include <cuda_runtime.h>
 #include <stdio.h>
 #include <sys/time.h>
@@ -356,7 +357,8 @@ int main(int argc, char **argv)
 ```
 ### WITHOUT MEMST
 ```
-%%writefile wmem.cu
+%%cuda
+#include <stdio.h>
 #include <cuda_runtime.h>
 #include <stdio.h>
 #include <sys/time.h>
@@ -665,11 +667,11 @@ int main(int argc, char **argv)
 
 ### WITH MEMSET:
 
-![image](https://github.com/Dhanashreemullaithasan/PCA-EXP-4-MATRIX-ADDITION-WITH-UNIFIED-MEMORY-AY-23-24/assets/94165415/5d48abf4-57f2-467e-b60e-db6ab0f80bca)
+![Screenshot 2024-05-13 220455](https://github.com/Dhanashreemullaithasan/PCA-EXP-4-MATRIX-ADDITION-WITH-UNIFIED-MEMORY-AY-23-24/assets/94165415/c790918b-d0bb-4a22-bede-7137f4b5bfc6)
 
 ### WITHOUT MEMST:
 
-![image](https://github.com/Dhanashreemullaithasan/PCA-EXP-4-MATRIX-ADDITION-WITH-UNIFIED-MEMORY-AY-23-24/assets/94165415/8ec727af-ab68-42f0-93b4-0daa07a8fd45)
+![Screenshot 2024-05-13 220509](https://github.com/Dhanashreemullaithasan/PCA-EXP-4-MATRIX-ADDITION-WITH-UNIFIED-MEMORY-AY-23-24/assets/94165415/b024b9d5-9ff3-4765-8a65-4b584ad6cfb0)
 
 ## RESULT:
-Thus the program has been executed by using unified memory. It is observed that removing memset function has given less 0.017889 (0.2) sec time.
+Thus the program has been executed by using unified memory. It is observed that removing memset function has given less 0.013736 sec time.
